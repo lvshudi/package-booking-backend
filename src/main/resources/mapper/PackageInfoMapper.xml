@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tws.repository.PackageInfoMapper">
-    <select id="selectAll" resultType="tws.entity.Employee">
+    <select id="selectAll" resultType="tws.entity.PackageInfo">
         select * from `packageinfo`;
     </select>
 
-    <insert id="insert" parameterType="tws.entity.Employee">
-       insert into `employee`(`id`,`name`,`age`) values(#{employee.id},#{employee.name},#{employee.age});
+    <insert id="insert" parameterType="tws.entity.PackageInfo">
+       insert into `packageinfo` values(#{packageInfo.packageId},#{packageInfo.customName},#{packageInfo.phoneNumber},
+       #{packageInfo.status},#{packageInfo.orderDate});
     </insert>
 </mapper>
